@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mi_Traguito</string>
+    <string name="Onzas_Liquidas">Onzas</string>
+    <string name="peso">Su Peso En lb.</string>
+    <string name="horas">Horas Transcurridas</string>
+    <string name="cantidad">Cuantas a tomado</string>
+    <string name="porciento">Porciento de Alcohol</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+    <string name="mi_traguito">Mi Traguito</string>
+
+</resources>
