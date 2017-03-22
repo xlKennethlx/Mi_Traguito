@@ -22,7 +22,8 @@ public class Calculator extends AppCompatActivity {
         EditText horas_transcurridas = (EditText)findViewById(R.id.editText3);
         EditText cantidad_ingresada = (EditText)findViewById(R.id.editText4);
         EditText porciento_ingresado = (EditText)findViewById(R.id.editText5);
-        TextView t1 = (TextView)findViewById(R.id.textView);
+        TextView t1 = (TextView)findViewById(R.id.textView);//holaaaaaaa
+        //ahudishnjnsdkcnjks
 
         double P = Double.parseDouble(porciento_ingresado.getText().toString());//Porciento de alcohol en la bebida
         double onzas = Double.parseDouble(onzas_ingresadas.getText().toString());//onzas de la bebida
