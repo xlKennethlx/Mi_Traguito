@@ -24,6 +24,8 @@ public class Calculator extends AppCompatActivity {
         EditText porciento_ingresado = (EditText)findViewById(R.id.editText5);
         TextView t1 = (TextView)findViewById(R.id.textView);
 
+        //kenneth pato
+
         double P = Double.parseDouble(porciento_ingresado.getText().toString());//Porciento de alcohol en la bebida
         double onzas = Double.parseDouble(onzas_ingresadas.getText().toString());//onzas de la bebida
         double W = Double.parseDouble(peso_ingresado.getText().toString());//Peso
