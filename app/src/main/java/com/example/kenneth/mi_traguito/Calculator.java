@@ -15,7 +15,7 @@ public class Calculator extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
     }
 
-    public void eventoCalcular(View v){
+    public double eventoCalcular(View v){
         double r =0.73;//Constante de Genero
         EditText onzas_ingresadas = (EditText)findViewById(R.id.editText);
         EditText peso_ingresado = (EditText)findViewById(R.id.editText2);
@@ -36,5 +36,6 @@ public class Calculator extends AppCompatActivity {
         double total = ((A*5.14)/(W*r))-(0.015*H);//Formula para el Blood Alcohol Content
         total = Math.floor(total*1000)/1000;//Se convierte el total a 4 numeros despues del punto
         t1.setText(Double.toString(total)+"%");
+        return total;
     }
 }
