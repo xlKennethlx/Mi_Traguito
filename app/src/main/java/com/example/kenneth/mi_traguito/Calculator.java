@@ -1,7 +1,10 @@
 package com.example.kenneth.mi_traguito;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +18,7 @@ public class Calculator extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
     }
 
-    public double eventoCalcular(View v){
+    public void eventoCalcular(View v){
         double r =0.73;//Constante de Genero
         EditText onzas_ingresadas = (EditText)findViewById(R.id.editText);
         EditText peso_ingresado = (EditText)findViewById(R.id.editText2);
@@ -36,6 +39,63 @@ public class Calculator extends AppCompatActivity {
         double total = ((A*5.14)/(W*r))-(0.015*H);//Formula para el Blood Alcohol Content
         total = Math.floor(total*1000)/1000;//Se convierte el total a 4 numeros despues del punto
         t1.setText(Double.toString(total)+"%");
-        return total;
+        myAlert(total);
+
+    }
+    public void myAlert(double A){
+
+        AlertDialog.Builder myAlert = new AlertDialog.Builder  (this);
+        String mensaje = null;
+
+        if(A < 0.03)
+        mensaje = "ligera euforia y pérdida de timidez. ";
+
+        else if (A > 0.03 && A < 0.06)
+            mensaje = "Sensación de bienestar, relajación, inhibiciones\n" +
+                    "inferiores, sensación de calor.";
+
+        else if (A > 0.07 && A < 0.08)
+            mensaje = "Disminución leve del equilibrio, el habla, la visión,\n" +
+                    "el tiempo de reacción y la audición. Euforia.";
+
+        else if (A > 0.9 && A < 0.125)
+            mensaje = "DE AQUI PARA ALANTE ES ILEGAL BORRACHON";
+
+        else if (A > 0.13 && A < 0.15)
+            mensaje = "Insuficiencia motora y falta de control físico. Visión\n" +
+                    "borrosa y pérdida importante de equilibrio.";
+
+        else if (A > 0.16 && A < 0.19)
+            mensaje = "Predomina la disforia, pueden aparecer náuseas.";
+
+        else if (A > 0.20 && A < 0.24)
+            mensaje = "Abatido aturdido, confundido o de otra manera\n" +
+                    "desorientado.";
+
+        else if (A > 0.25 && A < 0.29)
+            mensaje = " Todas las funciones mentales, físicas y sensoriales están\n" +
+                    "gravemente afectadas.";
+
+        else if (A > 0.30 && A < 0.34)
+            mensaje = "Tienes poca comprensión de dónde estás. Usted puede\n" +
+                    "desmayarse repentinamente y ser difícil de despertar.";
+
+        else if (A > 0.35 && A < 0.40)
+            mensaje = "Coma es posible.";
+
+        else if (A > 0.40 )
+            mensaje = "VISTE A DIOS, Comienzo del coma y posible muerte por\n" +
+                    "paro respiratorio.";
+
+
+        myAlert.setMessage(mensaje)
+                .setPositiveButton("continue", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .setTitle("B.A.C. Levels");
+        myAlert.show();
+
     }
 }
