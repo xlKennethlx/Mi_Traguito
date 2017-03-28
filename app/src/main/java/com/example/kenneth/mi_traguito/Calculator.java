@@ -47,40 +47,40 @@ public class Calculator extends AppCompatActivity {
         AlertDialog.Builder myAlert = new AlertDialog.Builder  (this);
         String mensaje = null;
 
-        if(A < 0.03)
-        mensaje = "ligera euforia y pérdida de timidez. ";
+        if(A <= 0.03)
+        mensaje = "Ligera euforia y pérdida de timidez. ";
 
-        else if (A > 0.03 && A < 0.06)
+        else if (A > 0.03 && A <= 0.06)
             mensaje = "Sensación de bienestar, relajación, inhibiciones\n" +
                     "inferiores, sensación de calor.";
 
-        else if (A > 0.07 && A < 0.08)
+        else if (A > 0.06 && A <= 0.08)
             mensaje = "Disminución leve del equilibrio, el habla, la visión,\n" +
                     "el tiempo de reacción y la audición. Euforia.";
 
-        else if (A > 0.9 && A < 0.125)
+        else if (A > 0.8 && A <= 0.125)
             mensaje = "DE AQUI PARA ALANTE ES ILEGAL BORRACHON";
 
-        else if (A > 0.13 && A < 0.15)
-            mensaje = "Insuficiencia motora y falta de control físico. Visión\n" +
-                    "borrosa y pérdida importante de equilibrio.";
+        else if (A > 0.125 && A <= 0.15)
+            mensaje = "Insuficiencia motora y falta de control físico. Visión borrosa y\n"+
+                    " pérdida importante de equilibrio.";
 
-        else if (A > 0.16 && A < 0.19)
+        else if (A > 0.15 && A <= 0.19)
             mensaje = "Predomina la disforia, pueden aparecer náuseas.";
 
-        else if (A > 0.20 && A < 0.24)
-            mensaje = "Abatido aturdido, confundido o de otra manera\n" +
+        else if (A > 0.19 && A <= 0.24)
+            mensaje = "Abatido, aturdido, confundido o de otra manera\n" +
                     "desorientado.";
 
-        else if (A > 0.25 && A < 0.29)
+        else if (A > 0.24 && A <= 0.29)
             mensaje = " Todas las funciones mentales, físicas y sensoriales están\n" +
                     "gravemente afectadas.";
 
-        else if (A > 0.30 && A < 0.34)
+        else if (A > 0.29 && A <= 0.34)
             mensaje = "Tienes poca comprensión de dónde estás. Usted puede\n" +
                     "desmayarse repentinamente y ser difícil de despertar.";
 
-        else if (A > 0.35 && A < 0.40)
+        else if (A > 0.34 && A <= 0.40)
             mensaje = "Coma es posible.";
 
         else if (A > 0.40 )
@@ -88,8 +88,7 @@ public class Calculator extends AppCompatActivity {
                     "paro respiratorio.";
 
 
-        myAlert.setMessage(mensaje)
-                .setPositiveButton("continue", new DialogInterface.OnClickListener() {
+        myAlert.setMessage(mensaje).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
