@@ -1,6 +1,7 @@
 package com.example.kenneth.mi_traguito;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Calculator extends AppCompatActivity {
+
 
 
     @Override
