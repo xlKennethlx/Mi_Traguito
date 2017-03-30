@@ -27,8 +27,6 @@ public class Calculator extends AppCompatActivity {
         EditText horas_transcurridas = (EditText)findViewById(R.id.editText3);
         EditText cantidad_ingresada = (EditText)findViewById(R.id.editText4);
         EditText porciento_ingresado = (EditText)findViewById(R.id.editText5);
-        TextView t1 = (TextView)findViewById(R.id.textView);
-        //probando
 
         double P = Double.parseDouble(porciento_ingresado.getText().toString());//Porciento de alcohol en la bebida
         double onzas = Double.parseDouble(onzas_ingresadas.getText().toString());//onzas de la bebida
@@ -40,12 +38,10 @@ public class Calculator extends AppCompatActivity {
         double  A = cantidad*onzas*P;//Onzas liquidas de alcohol
         double total = ((A*5.14)/(W*r))-(0.015*H);//Formula para el Blood Alcohol Content
         total = Math.floor(total*1000)/1000;//Se convierte el total a 4 numeros despues del punto
-        t1.setText(Double.toString(total)+"%");
         myAlert(total);
-
     }
-    public void myAlert(double A){
 
+    public void myAlert(double A){
         AlertDialog.Builder myAlert = new AlertDialog.Builder  (this);
         String mensaje = null;
 
@@ -61,7 +57,7 @@ public class Calculator extends AppCompatActivity {
                     "el tiempo de reacción y la audición. Euforia.";
 
         else if (A > 0.8 && A <= 0.125)
-            mensaje = "DE AQUI PARA ALANTE ES ILEGAL BORRACHON";
+            mensaje = "Probando por q no se xq no funciona";
 
         else if (A > 0.125 && A <= 0.15)
             mensaje = "Insuficiencia motora y falta de control físico. Visión borrosa y\n"+
@@ -90,9 +86,12 @@ public class Calculator extends AppCompatActivity {
                     "paro respiratorio.";
 
 
-        myAlert.setMessage(mensaje).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        myAlert.setMessage("Usted tiene: "+A+"%\n"+mensaje).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Calculator.this, History.class);
+                        Calculator.this.startActivity(intent);
+                        finish();
                     }
                 })
                 .setTitle("B.A.C. Levels");
