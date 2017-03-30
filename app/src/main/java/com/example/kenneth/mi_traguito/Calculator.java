@@ -53,11 +53,12 @@ public class Calculator extends AppCompatActivity {
                     "inferiores, sensación de calor.";
 
         else if (A > 0.06 && A <= 0.08)
-            mensaje = "Disminución leve del equilibrio, el habla, la visión,\n" +
-                    "el tiempo de reacción y la audición. Euforia.";
+            mensaje = "Disminución leve del equilibrio, el habla, la visión,el tiempo de reacción \n" +
+                    "y la audición.";
 
-        else if (A > 0.8 && A <= 0.125)
-            mensaje = "Probando por q no se xq no funciona";
+        else if (A > 0.081 && A <= 0.125)
+            mensaje = "Deteriorio significativo de la coordinacion motora\n"+
+                    "y perdida del buen juicio. En este porciento o mas es ilegal";
 
         else if (A > 0.125 && A <= 0.15)
             mensaje = "Insuficiencia motora y falta de control físico. Visión borrosa y\n"+
