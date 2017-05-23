@@ -9,6 +9,12 @@
     <string name="resultado">Resultado</string>
     <string name="mi_traguito">Mi Traguito</string>
     <string name="title_activity_history">History</string>
+    <string name="title_activity_nav_draw_main">NavDrawMainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 
 </resources>

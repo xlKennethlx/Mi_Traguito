@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.AbstractList;
+
 public class Calculator extends AppCompatActivity {
 
 
@@ -90,7 +92,7 @@ public class Calculator extends AppCompatActivity {
         myAlert.setMessage("Usted tiene: "+A+"%\n"+mensaje).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Calculator.this, History.class);
+                        Intent intent = new Intent(Calculator.this, NavDrawMainActivity.class);
                         Calculator.this.startActivity(intent);
                         finish();
                     }
