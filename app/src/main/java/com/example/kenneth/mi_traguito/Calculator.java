@@ -1,21 +1,20 @@
 package com.example.kenneth.mi_traguito;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.AbstractList;
+import android.widget.Toast;
 
 public class Calculator extends AppCompatActivity {
-
-
-
+    Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +39,7 @@ public class Calculator extends AppCompatActivity {
         double  A = cantidad*onzas*P;//Onzas liquidas de alcohol
         double total = ((A*5.14)/(W*r))-(0.015*H);//Formula para el Blood Alcohol Content
         total = Math.floor(total*1000)/1000;//Se convierte el total a 4 numeros despues del punto
+        FuncionSalvar(total);
         myAlert(total);
     }
 
@@ -99,6 +99,18 @@ public class Calculator extends AppCompatActivity {
                 })
                 .setTitle("B.A.C. Levels");
         myAlert.show();
+    }
 
+    public  void  FuncionSalvar(double totalA){
+        SharedPreferences sharpref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharpref.edit();
+        String apend = sharpref.getString("MiDato", "No hay datos");
+        if(apend!= "No hay datos"){
+            editor.putString("MiDato",apend.concat("\n"+String.valueOf(totalA)));
+        }
+        else {
+            editor.putString("MiDato",String.valueOf(totalA));
+        }
+        editor.commit();
     }
 }
