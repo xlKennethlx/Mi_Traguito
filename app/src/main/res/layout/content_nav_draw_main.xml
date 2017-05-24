@@ -12,8 +12,11 @@
         android:id="@+id/textView2"
         android:layout_width="338dp"
         android:layout_height="347dp"
+        android:lineSpacingExtra="8sp"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textSize="30sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="23dp"
         tools:layout_editor_absoluteY="72dp" />
 
