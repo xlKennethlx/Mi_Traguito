@@ -3,28 +3,28 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/profile"
             android:icon="@drawable/iconr"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/history"
             android:icon="@android:drawable/ic_menu_save"
             android:title="History" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/calculator"
             android:icon="@drawable/beericon"
             android:title="Calculator" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/facts"
             android:icon="@android:drawable/ic_input_get"
             android:title="Facts" />
 
         <item
-            android:id="@+id/nav_share"
+            android:id="@+id/map"
             android:icon="@android:drawable/ic_dialog_map"
             android:title="Map" />
         <item
-            android:id="@+id/nav_send"
+            android:id="@+id/exit"
             android:icon="@drawable/exit"
             android:title="Exit" />
 
