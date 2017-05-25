@@ -77,6 +77,10 @@ public class NavDrawMainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_delete) {
+            SharedPreferences sharpref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            SharedPreferences.Editor sharprefEditor = sharpref.edit();
+            sharprefEditor.remove("MiDato");
+            sharprefEditor.commit();
             FuncionLeerHistorial();
             return true;
         }
