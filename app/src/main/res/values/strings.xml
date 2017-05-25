@@ -21,34 +21,63 @@
         "variaciones individuales entre los usuarios. Algunos usuarios pueden intoxicarse"
         "a un nivel de alcohol en la sangre (BAC) mucho mas bajo que el mostrado .\n\n"
 
-        "Si el BAC es de 0.02 = 0.03 ligera euforia y pérdida de timidez. \n\n"
+        "BAC 0.02 - 0.03. \n"
+        "Ligera euforia y perdida de timidez. \n\n"
 
-        "Si el BAC es de 0.04 = 0.06 Sensación de bienestar, relajación, inhibiciones"
+        "BAC 0.04 - 0.06. \n"
+        "Sensación de bienestar, relajación, inhibiciones"
         "inferiores, sensación de calor. Euforia. Algunos menoscabo de razonamiento y"
         "memoria, disminución de la precaución. Su comportamiento puede llegar a ser"
         "exagerado y las emociones se intensifican (las buenas emociones son mejores, las"
         "malas emociones son peores). \n\n"
 
-        "Si el BAC es de 0.07 - 0.09 = Disminución leve del equilibrio, el habla, la visión,"
+        "BAC 0.07 - 0.09. \n"
+        "Disminución leve del equilibrio, el habla, la visión,"
         "el tiempo de reacción y la audición. Euforia. El juicio y el autocontrol se reducen,"
-        "y la precaución, la razón y la memoria se deterioran, .08 es legalmente dañado y"
+        "y la precaución, la razón y la memoria se deterioran. \n\n"
+
+        "BAC 0.08  es legalmente dañado. \n"
         "es ilegal conducir a este nivel. Probablemente creas que estás funcionando mejor"
         "de lo que realmente eres. \n\n"
 
+        "BAC 0.10 - 0.125. \n"
+        "El habla puede ser dificultosa; El equilibrio, la visión, el tiempo de reacción"
+        "y la audición se verán afectados. Euforia. \n\n"
+
+        "BAC 0.13 - 0.15. \n"
+        "Visión borrosa y pérdida importante de equilibrio."
+        "La euforia se reduce y comienza a aparecer disforia (ansiedad, inquietud)."
+        "El juicio y la percepción están seriamente dañados. \n\n"
+
+        "BAC 0.16 - 0.19. \n"
+        "Predomina la disforia, pueden aparecer náuseas."
+        "El bebedor tiene la apariencia de un "borracho descuidado.\n"
+
+        "BAC 0.20 - 0.24 \n"
+        "Abatido aturdido, confundido o de otra manera"
+        "desorientado. Puede necesitar ayuda para pararse o caminar. Si usted"
+        "se lastima usted puede no sentir el dolor. Algunas personas "
+        "experimentan náuseas y vómitos en este nivel. El reflejo de la"
+        "mordaza se ve afectado y se puede ahogar si se vomita. Los apagones son "
+        "probables en este nivel así que usted puede no recordar"
+        "lo que ha sucedido. \n\n"
+
+        "BAC 0.25 - 0.29. \n"
+        "Todas las funciones mentales, físicas y sensoriales están gravemente afectadas."
+        " Aumento del riesgo de asfixia por asfixia por vómito y delesiones graves"
+        "por caídas u otros accidentes. \n\n"
+
+        "BAC 0.30 - 0.34. \n"
+        "Tienes poca comprensión de dónde estás."
+        "Usted puede desmayarse repentinamente y ser difícil de despertar. \n\n"
+
+        "BAC 0.35 - 0.39. \n"
+        "Coma es posible. Este es el nivel de anestesia quirúrgica. \n\n"
+
+        "BAC 0.40 + \n"
+        "Comienzo del coma y posible muerte por paro respiratorio. \n\n"
 
 
-
-
-        "Components with responsive elevations may encounter other components as they move between "
-        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
-        "through other material, components avoid interfering with one another any number of ways, "
-        "whether on a per component basis or using the entire app layout.\n"
-        "On a component level, components can move or be removed before they cause interference. "
-        "For example, a floating action button (FAB) can disappear or move off screen before a "
-        "user picks up a card, or it can move if a snackbar appears.\n"
-        "On the layout level, design your app layout to minimize opportunities for interference. "
-        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
-        "when a user tries to pick up one of cards.\n\n"
     </string>
 
 
