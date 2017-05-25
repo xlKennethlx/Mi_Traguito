@@ -15,19 +15,9 @@
         android:lineSpacingExtra="8sp"
         android:text="TextView"
         android:textAlignment="viewStart"
-        android:textSize="30sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="23dp"
         tools:layout_editor_absoluteY="72dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="307dp"
-        android:layout_height="42dp"
-        android:text="Historial"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>

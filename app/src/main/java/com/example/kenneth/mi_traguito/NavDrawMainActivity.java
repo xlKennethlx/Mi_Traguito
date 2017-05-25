@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -96,7 +97,7 @@ public class NavDrawMainActivity extends AppCompatActivity
     public void FuncionLeerHistorial() {
         final SharedPreferences mSharedPreference= PreferenceManager.getDefaultSharedPreferences(context);
         String value=(mSharedPreference.getString("MiDato", "No hay datos"));
-        TextView historial = (TextView)findViewById(R.id.textView2);
+        TextView historial = (TextView) findViewById(R.id.textView2);
         historial.setText(value);
     }
 }

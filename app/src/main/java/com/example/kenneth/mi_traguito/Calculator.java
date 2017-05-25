@@ -1,5 +1,4 @@
 package com.example.kenneth.mi_traguito;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,8 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class Calculator extends AppCompatActivity {
     Context context = this;
@@ -102,14 +102,15 @@ public class Calculator extends AppCompatActivity {
     }
 
     public  void  FuncionSalvar(double totalA){
+        String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         SharedPreferences sharpref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharpref.edit();
         String apend = sharpref.getString("MiDato", "No hay datos");
         if(apend!= "No hay datos"){
-            editor.putString("MiDato",apend.concat("\n"+String.valueOf(totalA)));
+            editor.putString("MiDato",apend.concat("\n"+String.valueOf(totalA)+"%  on "+currentDateTimeString));
         }
         else {
-            editor.putString("MiDato",String.valueOf(totalA));
+            editor.putString("MiDato",String.valueOf(totalA)+"%  on "+currentDateTimeString);
         }
         editor.commit();
     }
