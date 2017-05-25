@@ -34,7 +34,6 @@ public class NavDrawMainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {Intent intent = new Intent(NavDrawMainActivity.this, Calculator.class);
                 NavDrawMainActivity.this.startActivity(intent);
-                finish();
 
 
             }
@@ -69,6 +68,21 @@ public class NavDrawMainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -82,13 +96,11 @@ public class NavDrawMainActivity extends AppCompatActivity
         } else if (id == R.id.calculator) {
             Intent intent = new Intent(NavDrawMainActivity.this, Calculator.class);
             NavDrawMainActivity.this.startActivity(intent);
-            finish();
         } else if (id == R.id.map) {
 
         } else if (id == R.id.facts) {
             Intent intent = new Intent(NavDrawMainActivity.this, ScrollingActivityFacts.class);
             NavDrawMainActivity.this.startActivity(intent);
-            finish();
 
         } else if (id == R.id.exit) {
             finish();
