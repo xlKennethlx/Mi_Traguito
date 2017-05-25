@@ -22,7 +22,10 @@
         <activity
             android:name=".Calculator"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".ScrollingActivityFacts"
+            android:label="@string/title_activity_scrolling_facts"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

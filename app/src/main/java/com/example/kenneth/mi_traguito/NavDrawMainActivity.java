@@ -85,6 +85,11 @@ public class NavDrawMainActivity extends AppCompatActivity
             finish();
         } else if (id == R.id.map) {
 
+        } else if (id == R.id.facts) {
+            Intent intent = new Intent(NavDrawMainActivity.this, ScrollingActivityFacts.class);
+            NavDrawMainActivity.this.startActivity(intent);
+            finish();
+
         } else if (id == R.id.exit) {
             finish();
         }
